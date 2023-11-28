@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	html {
+		font-family: Nunito Sans, Courier, monospace;
+	}
+}
+
+@keyframes bell {
+	0% { transform: rotateZ(0); }
+	1% { transform: rotateZ(30deg); }
+	3% { transform: rotateZ(-28deg); }
+	5% { transform: rotateZ(34deg); }
+	7% { transform: rotateZ(-32deg); }
+	9% { transform: rotateZ(30deg); }
+	11% { transform: rotateZ(-28deg); }
+	13% { transform: rotateZ(26deg); }
+	15% { transform: rotateZ(-24deg); }
+	17% { transform: rotateZ(22deg); }
+	19% { transform: rotateZ(-20deg); }
+	21% { transform: rotateZ(18deg); }
+	23% { transform: rotateZ(-16deg); }
+	25% { transform: rotateZ(14deg); }
+	27% { transform: rotateZ(-12deg); }
+	29% { transform: rotateZ(10deg); }
+	31% { transform: rotateZ(-8deg); }
+	33% { transform: rotateZ(6deg); }
+	35% { transform: rotateZ(-4deg); }
+	37% { transform: rotateZ(2deg); }
+	39% { transform: rotateZ(-1deg); }
+	41% { transform: rotateZ(1deg); }
+	43% { -webkit-transform: rotateZ(0); }
+	100% { -webkit-transform: rotateZ(0); }
+}
+
+@keyframes pulse {
+	0% { opacity: 0.5; }
+	10% { opacity: 0.6; }
+	20% { opacity: 0.7; }
+	30% { opacity: 0.8; }
+	40% { opacity: 0.9; }
+	50% { opacity: 1; }
+	60% { opacity: 0.9; }
+	70% { opacity: 0.8; }
+	80% { opacity: 0.7; }
+	90% { opacity: 0.6; }
+	100% { opacity: 0.5; }
+}
+
+.bellAnimation:hover {
+	animation: bell 4s ease-in-out infinite;
+}
+
+.pulsatingPlus {
+	animation: pulse 3s ease-in-out infinite;
+	background-color: #219C90;
+	color: white;
+	border-radius: 100%;
+}
